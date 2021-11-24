@@ -1,0 +1,34 @@
+{
+  "name": "@binary/gcc-arm-none-eabi-10.3",
+  "version": "1.0.0-2021.10",
+  "description": "gcc-arm-none-eabi-10.3",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "publishConfig": {
+    "registry": "https://registry-lpm.listenai.com"
+  },
+  "scripts": {
+    "build": "tsc -p .",
+    "test": "jest",
+    "prepublishOnly": "rm -rf lib && npm run build",
+    "install": "node lib/install.js"
+  },
+  "author": "zbzhao <zbzhao@listenai.com>",
+  "maintainers": [
+    "lpmadmin <lpm.admin@listenai.com>",
+    "xychen <xychen@listenai.com>",
+    "zbzhao <zbzhao@listenai.com>"
+  ],
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@binary/type": "^1.0.4",
+    "@xingrz/download2": "^9.0.0-alpha.4"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.2",
+    "@types/node": "^16.11.1",
+    "jest": "^27.3.1",
+    "ts-jest": "^27.0.7",
+    "typescript": "^4.4.4"
+  }
+}
